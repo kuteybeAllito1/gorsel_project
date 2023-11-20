@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vize_odevi1.KrediHesaplama"
+             Title="Kredi Hesaplama">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label Text="Kredi Türü" />
+            <Picker x:Name="PickerLoanType">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>KONUT kredisi</x:String>
+                        <x:String>İHTİYAÇ Kredisi</x:String>
+                        <x:String>TAŞIT Kredisi</x:String>
+                        <x:String>TİCARİ Kredisi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <HorizontalStackLayout>
+                <Label Text="Kredi Tutarı" />
+                <Entry x:Name="EntryKredi" Placeholder="Kredi Tutarını Girin" Keyboard="Numeric" Completed="OnEntryCompleted" TextColor="White" WidthRequest="800" Margin="30,0,0,0" />
+            </HorizontalStackLayout>
+            <Slider x:Name="Slider1" Minimum="50" Maximum="10000" ValueChanged="OnSliderValueChanged" />
+
+            <HorizontalStackLayout>
+                <Label Text="Yıllık Faiz Oranı (%)" />
+                <Entry x:Name="EntryFaiz" Placeholder="Yıllık Faiz Oranını Girin" Keyboard="Numeric" Completed="OnEntryCompleted" TextColor="White" WidthRequest="800" Margin="30,0,0,0" />
+            </HorizontalStackLayout>
+            <Slider x:Name="Slider2" Minimum="0.1" Maximum="90.0" ValueChanged="OnSliderValueChanged" />
+
+            <HorizontalStackLayout>
+                <Label Text="Kredi Süresi (Ay)" />
+                <Entry x:Name="EntryKrediSuresi" Placeholder="Kredi Süresini Girin" Keyboard="Numeric" Completed="OnEntryCompleted" TextColor="White" WidthRequest="800" Margin="30,0,0,0"/>
+            </HorizontalStackLayout>
+            <Slider x:Name="Slider3" Minimum="1" Maximum="360" ValueChanged="OnSliderValueChanged" />
+
+            <Button Text="Kredi Hesapla" Clicked="OnCalculateButtonClicked" FontSize="Medium" BackgroundColor="Grey" TextColor="Black"/>
+
+            <Label x:Name="LabelResult" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Vize_odevi1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Vize_odevi1"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="False"
+    BackgroundColor="Gray"
+    FlyoutBackground="Gray">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent
+    Icon="main.png"
+    Title="Ana Sayfa"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage"/>
+
+
+
+
+        <ShellContent
+    Icon="body.png"
+    Title="Vücut Kitle İndeksi"
+    ContentTemplate="{DataTemplate local:VucutHesaplama}"
+    Route="VucutHesaplama"/>
+
+
+        <ShellContent
+    Icon="credit.png" 
+    Title="Kredi Hesaplama"
+    ContentTemplate="{DataTemplate local:KrediHesaplama}"
+    Route="KrediHesaplama"/>
+
+
+
+        <ShellContent
+    Icon="ren.png" 
+    Title="Renk Seçici"
+    ContentTemplate="{DataTemplate local:Renkler}"
+    Route="Renkler"/>
+
+
+        <ShellContent
+    Icon="notes.png" 
+    Title="Yapılacaklar Listesi"
+    ContentTemplate="{DataTemplate local:YapilacakListe}"
+    Route="YapilacakListe"/>
+
+
+
+    </FlyoutItem>
+
+</Shell>

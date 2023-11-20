@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vize_odevi1.Renkler"
+             Title="Renkler">
+    <ScrollView>
+        <VerticalStackLayout
+         Spacing="25"
+         Padding="30,0"
+         VerticalOptions="Center">
+            <VerticalStackLayout>
+
+                <Label>Red</Label>
+                <Slider x:Name="slR" Maximum="255" ValueChanged="slR_ValueChanged"/>
+                <Label x:Name="lblR" Text="0"/>
+
+
+            </VerticalStackLayout>
+
+            <Border HeightRequest="7"/>
+
+            <VerticalStackLayout>
+
+                <Label>Green</Label>
+                <Slider x:Name="slG" Maximum="255" ValueChanged="slG_ValueChanged"/>
+                <Label x:Name="lblG" Text="0"/>
+
+
+            </VerticalStackLayout>
+
+            <Border HeightRequest="7"/>
+
+
+
+            <VerticalStackLayout>
+
+                <Label>Blue</Label>
+                <Slider x:Name="slB" Maximum="255" ValueChanged="slB_ValueChanged"/>
+                <Label x:Name="lblB" Text="0"/>
+
+
+            </VerticalStackLayout>
+
+            <Border HeightRequest="7"/>
+
+            <Label x:Name="lbl" HeightRequest =" 100" BackgroundColor="#000"/>
+
+            <Button Text="Rastgele Renk Oluştur" Clicked="OnRandomColorButtonClicked" FontSize="Medium" BackgroundColor="Grey" TextColor="Black" />
+            <Button Text="Kodu Kopyala" Clicked="OnCopyButtonClicked" FontSize="Medium" BackgroundColor="Grey" TextColor="Black" />
+            <Entry/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
